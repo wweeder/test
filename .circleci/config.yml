@@ -24,6 +24,9 @@ jobs:
           name: Install SCP 
           command: apt-get install openssh-client 
       - run:
+          name: Check sources
+          command: cat /etc/apt/sources.list
+      - run:
           name: Execute SCP to EC2
           command: |
             chmod 600 ~/.ssh/id_*
