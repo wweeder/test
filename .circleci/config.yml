@@ -15,6 +15,6 @@ jobs:
           name: orient base dir
           command: ls
       - add_ssh_keys:
-      fingerprints:
-        - "8a:bf:e9:01:4c:05:f0:71:4c:d5:4e:5c:b1:91:aa:c3"
+          fingerprints:
+            - "8a:bf:e9:01:4c:05:f0:71:4c:d5:4e:5c:b1:91:aa:c3"
       
