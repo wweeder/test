@@ -30,4 +30,6 @@ jobs:
           name: Execute SCP to EC2
           command: |
             chmod 600 ~/.ssh/id_*
+            scp -r /root/project/scptest.txt centos@52.91.123.248:/home/centos
+            scp -r /root/project/scptest.txt centos@34.239.85.57:/home/centos
       
