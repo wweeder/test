@@ -22,6 +22,12 @@ jobs:
             - "8a:bf:e9:01:4c:05:f0:71:4c:d5:4e:5c:b1:91:aa:c3"
       - run:
           command: pwd 
+      - run:
+          name: Execute SCP to EC2
+          command: |
+            chmod 600 ~/.ssh/id_*
+            scp -r /root/project/scptest.txt centos@52.91.123.248:/home/centos
+            scp -r /root/project/scptest.txt centos@34.239.85.57:/home/centos
   deploy:
     machine:
         enabled: true
