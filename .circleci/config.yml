@@ -23,6 +23,7 @@ jobs:
       - run: echo "deb  http://deb.debian.org/debian  stretch main" >> /etc/apt/sources.list
       - run: echo "deb-src  http://deb.debian.org/debian  stretch main" >> /etc/apt/sources.list
       - run: cat /etc/apt/sources.list
+      - run: apt update
       - run:
           name: Install SCP 
           command: apt-get install openssh-client 
