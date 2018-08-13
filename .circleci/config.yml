@@ -26,7 +26,7 @@ jobs:
       - run: apt update
       - run:
           name: Install SCP 
-          command: apt-get install openssh-client 
+          command: apt -y install openssh-client 
       - run:
           name: Execute SCP to EC2
           command: |
