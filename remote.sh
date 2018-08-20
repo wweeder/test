@@ -1,2 +1,2 @@
 sudo su;
-echo "root testy test" > root-remoted.txt
+echo "Remote script execution via circleci is working" > root-remoted.txt
