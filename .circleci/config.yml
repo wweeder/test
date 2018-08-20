@@ -41,6 +41,8 @@ jobs:
           name: Execute SCP to EC2
           command: |
             chmod 600 ~/.ssh/id_*
-            scp -r /root/project/scptest.txt centos@52.91.123.248:/home/centos
-            scp -r /root/project/scptest.txt centos@34.239.85.57:/home/centos
+            scp -r /root/project/remote.sh centos@52.91.123.248:/home/centos
+            scp -r /root/project/remote.sh centos@34.239.85.57:/home/centos
+            ssh -i ./circleci-comply-qa.pem centos@52.91.123.248 'bash -s' < remote.sh
+            ssh -i ./circleci-comply-qa.pem centos@34.239.85.57 'bash -s' < remote.sh
       
